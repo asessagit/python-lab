@@ -22,8 +22,14 @@ python-lab/
 ├── advinha_for_refatorado      # Jogo de adivinhação — versão comentada linha a linha
 ├── advinha_vetor.py            # Jogo de adivinhação — versão com histórico de chutes (vetor)
 ├── lab.py                      # Resolução de equações do 2º grau (raízes reais e complexas)
+├── LICENSE                     # Licença MIT do projeto
+├── matmultiplica.py            # Multiplicação de matriz 5x5 por um número inteiro — versão inicial (tamanho fixo)
+├── matmultiplica_dinamico.py   # Multiplicação de matriz por um número inteiro — versão com tamanho definido pelo usuário
+├── matmultiplica_refatorado.py # Multiplicação de matriz 5x5 por um número inteiro — versão com list comprehension comentada
 ├── requirements.txt            # Dependências Python do projeto
 ├── vecmedia.py                 # Cálculo da média de notas de alunos usando vetores
+├── vecnegativo.py              # Geração de números aleatórios e substituição de valores negativos
+├── vecpar.py                   # Verificação de números pares e multiplicação por 2
 └── vecvendas.py                # Cálculo da variação de estoque de produtos usando vetores
 ```
 
@@ -42,6 +48,17 @@ Os quatro arquivos `advinha*` implementam o mesmo jogo — o programa sorteia um
 ### Manipulação de dados com vetores
 - **`vecmedia.py`** — Lê duas notas de 60 alunos, calcula a média individual de cada um e a média geral da turma.
 - **`vecvendas.py`** — Compara o estoque anterior e atual de 5 produtos e informa entradas, saídas ou estabilidade no estoque.
+- **`vecnegativo.py`** — Gera 10 números aleatórios entre -10 e 10 e substitui os valores negativos por 1.
+- **`vecpar.py`** — Lê números digitados pelo usuário (até que 0 seja informado) e multiplica por 2 os que forem pares.
+
+### Matrizes
+Os três arquivos `matmultiplica*` resolvem o mesmo problema — multiplicar uma matriz por um número inteiro — em estágios diferentes de refatoração:
+
+| Arquivo | Conceito praticado |
+|---|---|
+| `matmultiplica.py` | Matriz 5x5 de tamanho fixo, preenchida e multiplicada com laços `for` aninhados tradicionais |
+| `matmultiplica_dinamico.py` | Tamanho da matriz definido pelo usuário (linhas/colunas), preenchimento com list comprehension |
+| `matmultiplica_refatorado.py` | Matriz 5x5 fixa, reescrita com list comprehension dupla e totalmente comentada |
 
 ### Matemática
 - **`lab.py`** — Resolve equações do 2º grau (Bhaskara) usando o módulo `cmath`, tratando tanto raízes reais quanto complexas, com validação de entrada (coeficiente `a` não pode ser zero).
@@ -91,5 +108,5 @@ Este é um repositório pessoal de estudo. Para sugestões, abra uma *Issue*.
 Este projeto está licenciado sob os termos da [Licença MIT](https://github.com/asessagit/python-lab/blob/master/LICENSE).
 
 ---
-Última atualização: 2026-09-07
+Última atualização: 2026-09-08
 Autor: [asessagit](https://github.com/asessagit) (Alex Sessa)
