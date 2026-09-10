@@ -1,6 +1,5 @@
-# Algoritmo cria matriz 4x4 e verifica se os elementos são maiores que 10 e adiciona 2 caso sejam.
-# Além disso, calcula soma, média, máximo e mínimo dos elementos.
 # Matriz dinâmica: o usuário escolhe linhas e colunas, tornando o algoritmo mais flexível.
+# Além disso, calcula soma, média, máximo e mínimo dos elementos.
 # Função para ler um número real com validação
 def ler_float(mensagem):
     while True:  # loop infinito até o usuário digitar corretamente
