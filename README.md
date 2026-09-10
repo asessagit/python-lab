@@ -47,6 +47,8 @@ python-lab/
     └── Modularizacao/                                  # Funções e procedimentos reutilizáveis
         ├── func_calcular_media.py            # Função que calcula a média de uma lista de números
         ├── func_calcular_media_refat.py       # Versão refatorada, com validação de entrada e mais estatísticas
+        ├── func_maior_modulo.py               # Função que encontra o número de maior módulo em um vetor
+        ├── func_maior_modulo_refat.py         # Versão refatorada, com validação, índice e ordenação do vetor
         ├── proc_calcular_valor.py             # Procedimento que aplica desconto por faixa de valor
         └── proc_calcular_valor_refat.py       # Versão refatorada, com validação de entrada e ternário
 ```
@@ -108,6 +110,8 @@ Algoritmos que separam a lógica em **funções e procedimentos reutilizáveis**
 |---|---|
 | `func_calcular_media.py` | Função `calcular_media()` que recebe uma lista e retorna a média, com tratamento de lista vazia |
 | `func_calcular_media_refat.py` | Função de leitura validada (`ler_numero()`) + função `calcular_estatisticas()` retornando soma, média, máximo e mínimo |
+| `func_maior_modulo.py` | Função `MaiorModulo()` que percorre um vetor e retorna o número com maior valor absoluto |
+| `func_maior_modulo_refat.py` | Mesma função, refatorada: valida entradas (aceita vírgula decimal), retorna também o módulo e o índice, e exibe o vetor ordenado |
 | `proc_calcular_valor.py` | Procedimento `calcular_desconto()` que aplica desconto por faixa de valor (0%, 10%, 20%) |
 | `proc_calcular_valor_refat.py` | Mesma lógica de desconto, refatorada com validação de entrada e operador ternário |
 
