@@ -54,8 +54,6 @@ def linha_horizontal():
 linha_horizontal()  # imprime a linha superior da tabela
 for linha in num:  # percorre cada linha da matriz
     print("|" + "|".join(f"{elem:^{largura}.2f}" for elem in linha) + "|")
-    # imprime os elementos da linha, centralizados dentro da largura fixa
-    # cada célula é separada por "|"
     linha_horizontal()  # imprime a linha de grade abaixo da linha de dados
 
 '''
