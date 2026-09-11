@@ -1,5 +1,5 @@
 [![Python](https://img.shields.io/badge/python-3.11-blue?logo=python)](https://github.com/asessagit/python-lab)
-[![Jupyter](https://img.shields.io/badge/jupyter-notebook-orange?logo=jupyter)](https://github.com/asessagit/python-lab/tree/master/Algoritmos/Estrutura_Seleção_Repetição_Multipla_Escolha)
+[![Jupyter](https://img.shields.io/badge/jupyter-notebook-orange?logo=jupyter)](https://github.com/asessagit/python-lab/tree/master/Algoritmos/Estrutura_Selecao_Repeticao_Multipla_Escolha)
 [![Docker](https://img.shields.io/badge/docker-ready-blue?logo=docker)](https://github.com/asessagit/python-lab/tree/master/.devcontainer)
 [![DevContainer](https://img.shields.io/badge/devcontainer-ready-green?logo=docker)](https://github.com/asessagit/python-lab/tree/master/.devcontainer)
 [![License](https://img.shields.io/badge/license-MIT-yellow)](https://github.com/asessagit/python-lab/blob/master/LICENSE)
@@ -38,19 +38,25 @@ python-lab/
     │       ├── matsoma_condicao_10_refat.py      # Soma condicional 4x4, refatorada com estatísticas
     │       ├── matsoma_dinamico.py               # Soma, média, maior e menor elemento de matriz NxM
     │       └── matsoma_refatorado.py             # Soma de matriz 4x2 — com validação de entrada
-    ├── Estrutura_Seleção_Repetição_Multipla_Escolha/   # Condicionais, laços e múltipla escolha
+    ├── Estrutura_Selecao_Repeticao_Multipla_Escolha/   # Condicionais, laços e múltipla escolha
     │   ├── Lab.ipynb                     # Notebook Jupyter com experimentos e anotações de estudo
     │   ├── advinha.py                    # Jogo de adivinhação — versão inicial (while)
     │   ├── advinha_for.py                # Jogo de adivinhação — refatorado para usar for/else
     │   ├── advinha_for_refatorado.py     # Jogo de adivinhação — versão comentada linha a linha
     │   └── lab.py                        # Resolução de equações do 2º grau (raízes reais e complexas)
-    └── Modularizacao/                                  # Funções e procedimentos reutilizáveis
+    ├── Modularizacao/                                  # Funções e procedimentos reutilizáveis
         ├── func_calcular_media.py            # Função que calcula a média de uma lista de números
         ├── func_calcular_media_refat.py       # Versão refatorada, com validação de entrada e mais estatísticas
         ├── func_maior_modulo.py               # Função que encontra o número de maior módulo em um vetor
         ├── func_maior_modulo_refat.py         # Versão refatorada, com validação, índice e ordenação do vetor
         ├── proc_calcular_valor.py             # Procedimento que aplica desconto por faixa de valor
         └── proc_calcular_valor_refat.py       # Versão refatorada, com validação de entrada e ternário
+    └── Recursividade/                                  # Funções que chamam a si mesmas
+        ├── hanoi.py                           # Torre de Hanói recursiva — imprime a sequência de movimentos
+        ├── hanoi_gif.py                       # Torre de Hanói recursiva + geração de GIF animado dos movimentos
+        ├── sequencia.py                       # Sequência recursiva simples (potências de 2)
+        ├── torre_hanoi.gif                    # GIF gerado por hanoi_gif.py
+        └── frames_hanoi/                      # Frames PNG gerados por hanoi_gif.py (saída, não código-fonte)
 ```
 
 ## 🎮 Estrutura Conjunto de Dados
@@ -58,7 +64,7 @@ python-lab/
 Algoritmos que trabalham com **listas, vetores e matrizes**.
 
 ### Jogo de adivinhação (evolução progressiva)
-Os quatro arquivos `advinha*` implementam o mesmo jogo — o programa sorteia um número entre 0 e 100 e o jogador tenta acertar em até 10 tentativas — em estágios diferentes de refatoração. Só `advinha_vetor.py` usa de fato uma estrutura de dados (por isso está em `Estrutura_Conjunto_Dados/Vetores/`); os outros três moram em `Estrutura_Seleção_Repetição_Multipla_Escolha/`, pois praticam apenas laços e condicionais:
+Os quatro arquivos `advinha*` implementam o mesmo jogo — o programa sorteia um número entre 0 e 100 e o jogador tenta acertar em até 10 tentativas — em estágios diferentes de refatoração. Só `advinha_vetor.py` usa de fato uma estrutura de dados (por isso está em `Estrutura_Conjunto_Dados/Vetores/`); os outros três moram em `Estrutura_Selecao_Repeticao_Multipla_Escolha/`, pois praticam apenas laços e condicionais:
 
 | Arquivo | Pasta | Conceito praticado |
 |---|---|---|
@@ -115,6 +121,18 @@ Algoritmos que separam a lógica em **funções e procedimentos reutilizáveis**
 | `proc_calcular_valor.py` | Procedimento `calcular_desconto()` que aplica desconto por faixa de valor (0%, 10%, 20%) |
 | `proc_calcular_valor_refat.py` | Mesma lógica de desconto, refatorada com validação de entrada e operador ternário |
 
+## 🔁 Recursividade
+
+Algoritmos que resolvem o problema chamando **a própria função**, reduzindo o problema a casos menores até um caso base.
+
+| Arquivo | Conceito praticado |
+|---|---|
+| `sequencia.py` | Recursão simples: calcula uma sequência de potências de 2 (`2, 4, 8, 16...`) até o 10º termo |
+| `hanoi.py` | Resolve o clássico problema da Torre de Hanói, imprimindo a sequência ótima de movimentos para `n` discos |
+| `hanoi_gif.py` | Mesma lógica da Torre de Hanói, mas desenha cada movimento com `matplotlib` e monta um GIF animado (`torre_hanoi.gif`) a partir dos frames salvos em `frames_hanoi/` |
+
+> ⚠️ `hanoi_gif.py` depende de `imageio`, que ainda não está listado em `requirements.txt` — vale adicionar se for rodar esse script.
+
 ## 🚀 Como executar
 
 ### Opção 1 — Dev Container (recomendado)
@@ -149,6 +167,7 @@ seaborn
 scipy
 jupyter
 notebook
+
 ```
 
 ## 🤝 Contribuindo
@@ -158,5 +177,5 @@ Este é um repositório pessoal de estudo. Para sugestões, abra uma *Issue*.
 Este projeto está licenciado sob os termos da [Licença MIT](https://github.com/asessagit/python-lab/blob/master/LICENSE).
 
 ---
-Última atualização: 2026-09-10
+Última atualização: 2026-09-11
 Autor: [asessagit](https://github.com/asessagit) (Alex Sessa)
