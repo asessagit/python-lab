@@ -17,6 +17,8 @@ python-lab/
 ├── .devcontainer/                                    # Ambiente de desenvolvimento containerizado (Docker + VS Code)
 │   ├── Dockerfile
 │   └── devcontainer.json
+├── .vscode/
+│   └── settings.json                                 # Configuração do interpretador Python no VS Code
 ├── .gitignore
 ├── LICENSE                                            # Licença MIT do projeto
 ├── requirements.txt                                   # Dependências Python do projeto
@@ -131,8 +133,6 @@ Algoritmos que resolvem o problema chamando **a própria função**, reduzindo o
 | `hanoi.py` | Resolve o clássico problema da Torre de Hanói, imprimindo a sequência ótima de movimentos para `n` discos |
 | `hanoi_gif.py` | Mesma lógica da Torre de Hanói, mas desenha cada movimento com `matplotlib` e monta um GIF animado (`torre_hanoi.gif`) a partir dos frames salvos em `frames_hanoi/` |
 
-> ⚠️ `hanoi_gif.py` depende de `imageio`, que ainda não está listado em `requirements.txt` — vale adicionar se for rodar esse script.
-
 ## 🚀 Como executar
 
 ### Opção 1 — Dev Container (recomendado)
@@ -162,12 +162,12 @@ python3 advinha_vetor.py
 ```
 numpy
 pandas
-matplotlib
+matplotlib==3.11.1
 seaborn
 scipy
 jupyter
 notebook
-
+imageio==2.37.4
 ```
 
 ## 🤝 Contribuindo
@@ -177,5 +177,5 @@ Este é um repositório pessoal de estudo. Para sugestões, abra uma *Issue*.
 Este projeto está licenciado sob os termos da [Licença MIT](https://github.com/asessagit/python-lab/blob/master/LICENSE).
 
 ---
-Última atualização: 2026-09-11
+Última atualização: 2026-09-11 (revisão 2)
 Autor: [asessagit](https://github.com/asessagit) (Alex Sessa)
