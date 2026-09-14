@@ -47,12 +47,21 @@ python-lab/
     │   ├── advinha_for_refatorado.py     # Jogo de adivinhação — versão comentada linha a linha
     │   └── lab.py                        # Resolução de equações do 2º grau (raízes reais e complexas)
     ├── Modularizacao/                                  # Funções e procedimentos reutilizáveis
-        ├── func_calcular_media.py            # Função que calcula a média de uma lista de números
-        ├── func_calcular_media_refat.py       # Versão refatorada, com validação de entrada e mais estatísticas
-        ├── func_maior_modulo.py               # Função que encontra o número de maior módulo em um vetor
-        ├── func_maior_modulo_refat.py         # Versão refatorada, com validação, índice e ordenação do vetor
-        ├── proc_calcular_valor.py             # Procedimento que aplica desconto por faixa de valor
-        └── proc_calcular_valor_refat.py       # Versão refatorada, com validação de entrada e ternário
+    │   ├── func_calcular_media.py            # Função que calcula a média de uma lista de números
+    │   ├── func_calcular_media_refat.py       # Versão refatorada, com validação de entrada e mais estatísticas
+    │   ├── func_maior_modulo.py               # Função que encontra o número de maior módulo em um vetor
+    │   ├── func_maior_modulo_refat.py         # Versão refatorada, com validação, índice e ordenação do vetor
+    │   ├── proc_calcular_valor.py             # Procedimento que aplica desconto por faixa de valor
+    │   └── proc_calcular_valor_refat.py       # Versão refatorada, com validação de entrada e ternário
+    ├── Ordenacao/                                       # Benchmarks visuais de complexidade Big-O
+    │   ├── BigO                          # Benchmark de 10 complexidades (O(1) a O(n^log2 7)) — gera CSV, PNG e GIF
+    │   ├── BigO_2                        # Comparação focada em 4 algoritmos otimizados (Fibonacci memo, merge/quicksort, Strassen)
+    │   ├── complexidades.csv             # Saída de BigO — tempos medidos por complexidade
+    │   ├── complexidades.png             # Gráfico de tempos reais gerado por BigO
+    │   ├── complexidades.gif             # Animação do crescimento relativo gerada por BigO
+    │   ├── complexidades_normalizadas.png # Gráfico medido x teórico gerado por BigO
+    │   ├── complexidades_2.csv           # Saída de BigO_2
+    │   └── complexidades_2.png           # Gráfico gerado por BigO_2
     └── Recursividade/                                  # Funções que chamam a si mesmas
         ├── hanoi.py                           # Torre de Hanói recursiva — imprime a sequência de movimentos
         ├── hanoi_gif.py                       # Torre de Hanói recursiva + geração de GIF animado dos movimentos
@@ -123,6 +132,17 @@ Algoritmos que separam a lógica em **funções e procedimentos reutilizáveis**
 | `proc_calcular_valor.py` | Procedimento `calcular_desconto()` que aplica desconto por faixa de valor (0%, 10%, 20%) |
 | `proc_calcular_valor_refat.py` | Mesma lógica de desconto, refatorada com validação de entrada e operador ternário |
 
+## 📊 Ordenação / Complexidade (Big-O)
+
+Apesar do nome da pasta, o foco aqui não é só ordenação — são **benchmarks visuais comparando complexidades Big-O** de vários algoritmos (busca, ordenação, recursão, multiplicação de matrizes), medindo tempo real de execução e comparando com o crescimento teórico.
+
+| Arquivo | O que faz |
+|---|---|
+| `BigO` | Mede e compara 10 complexidades (`O(1)` até `O(n^log2 7)` de Strassen), incluindo busca binária, busca linear, merge sort, quicksort, bubble sort O(n²), O(n³), recursão exponencial e Fibonacci memoizado. Gera `complexidades.csv`, `complexidades.png`, `complexidades_normalizadas.png` e uma animação `complexidades.gif` |
+| `BigO_2` | Versão focada em 4 algoritmos otimizados (Fibonacci memoizado, merge sort, quicksort e Strassen), comparando tempo medido x crescimento teórico lado a lado. Gera `complexidades_2.csv` e `complexidades_2.png` |
+
+> Os arquivos `.csv`, `.png` e `.gif` dessa pasta são saída gerada pelos scripts ao rodar — não precisam ser editados manualmente.
+
 ## 🔁 Recursividade
 
 Algoritmos que resolvem o problema chamando **a própria função**, reduzindo o problema a casos menores até um caso base.
@@ -177,5 +197,5 @@ Este é um repositório pessoal de estudo. Para sugestões, abra uma *Issue*.
 Este projeto está licenciado sob os termos da [Licença MIT](https://github.com/asessagit/python-lab/blob/master/LICENSE).
 
 ---
-Última atualização: 2026-09-11 (revisão 2)
+Última atualização: 2026-09-14
 Autor: [asessagit](https://github.com/asessagit) (Alex Sessa)
