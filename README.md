@@ -188,6 +188,7 @@ scipy
 jupyter
 notebook
 imageio==2.37.4
+Pillow==12.3.0
 ```
 
 ## 🤝 Contribuindo
